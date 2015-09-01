@@ -7,6 +7,7 @@
         <title>雨滴FM--英语朗读专家</title>
         <style type="text/css">
                 body{
+                background-color: #4682FF;
                 height: 100%;
                 width: 100%;
                 background-image:linear-gradient(to left,#99E0FF,#4682FF);
@@ -59,8 +60,32 @@
                     -webkit-animation-duration:0.5s;
                     -webkit-animation-timing-function:ease-in;
                     -webkit-animation-fill-mode:forwards;
+                    -ms-animation-name:drop;
+                    -ms-animation-duration:0.5s;
+                    -ms-animation-timing-function:ease-in;
+                    -ms-animation-fill-mode:forwards;
+                    -moz-animation-name:drop;
+                    -moz-animation-duration:0.5s;
+                    -moz-animation-timing-function:ease-in;
+                    -moz-animation-fill-mode:forwards;
                 }
                 @-webkit-keyframes drop{
+                from{
+                transform:translate(0,0)
+                }
+                to{
+                transform:translate(0,125px)
+                }
+                }
+                @-ms-keyframes drop{
+                from{
+                transform:translate(0,0)
+                }
+                to{
+                transform:translate(0,125px)
+                }
+                }
+                @-moz-keyframes drop{
                 from{
                 transform:translate(0,0)
                 }
@@ -88,7 +113,7 @@
     </head>
     <body>
         <div class="content">
-            <div class="dropbox"><img id="drop" src="22.jpg"></div>
+            <div class="dropbox"><img id="drop" src="raindrop.png"></div>
             <div id="div1">
                 <img id="modify" src="modify.png">
                 <p>雨滴FM<br/>英语爱好者学习平台</p>
