@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="icon" href="icon.png">
+        <title>雨滴FM--英语朗读专家</title>
+        <style type="text/css">
+                body{
+                background-color: #4682FF;
+                height: 100%;
+                width: 100%;
+                background-image:linear-gradient(to left,#99E0FF,#4682FF);
+                background-size: 100%;
+                color:white;
+                font-family: "Microsoft YaHei";
+                }
+                img{
+                width: 120px;
+                height: 120px;
+                }
+                .dropbox{
+                margin-top:10px;
+                width: 50%;
+                height: 80px;
+                position: relative;
+                }
+                #img1,#modify{
+                border-radius: 22.5%;
+                }
+                .img2{
+                margin: 5px;
+                }
+                div{
+                width: 230px;
+                margin: 60px auto;
+                text-align: center;
+                }
+                #div1{
+                margin-top: 10px;
+                }
+                .bgcolor{
+                background-color: white;
+                border-radius: 5%;
+                width: 130px;
+                height: 130px;
+                margin: 20px auto;
+                }
+                p{
+                text-shadow:2px 2px 6px #000;
+                font-size: 20px;
+                }
+                .content{
+                margin-top:0px;
+                height: 100%;
+                }
+                #drop{
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                top:1%;
+                left: 20%;
+                }
+                @media screen and (max-width: 960px){
+                    .content{
+                    width: 80%;
+                    height: 80%;
+                    }
+                    div{
+                    margin: 10px auto;
+                    }
+                }
+        </style>
+        <script>
+                var timer1=setInterval(moveDown,30);
+                function moveDown(){
+                var rainDrop=document.getElementById('drop');
+                rainDrop.style.top=rainDrop.offsetTop+5+'px';
+                if (rainDrop.offsetTop>142) {
+                    clearInterval(timer1);
+                    var timer2=setInterval(function(){rainDrop.style.top=rainDrop.offsetTop-3+'px';},30);
+                };
+                }
+                setTimeout(changeUrl,1300);
+                function changeUrl(){
+                document.getElementById('modify').src='http://7q5cec.com1.z0.glb.clouddn.com/icon.png';
+                document.getElementById('drop').style.display='none';
+                }
+
+        </script>
+    </head>
+    <body>
+        <div class="content">
+            <div class="dropbox"><img id="drop" src="raindrop.png"></div>
+            <div id="div1">
+                <img id="modify" src="modify.png">
+                <p>雨滴FM<br/>英语爱好者学习平台</p>
+            </div>
+            <div>
+                <div class="bgcolor"><img class="img2" src="http://7q5cec.com1.z0.glb.clouddn.com/qr.png"/></div>
+                <p>扫描二维码下载</p>
+            </div>
+        </div>
+    </body>
+</html>
